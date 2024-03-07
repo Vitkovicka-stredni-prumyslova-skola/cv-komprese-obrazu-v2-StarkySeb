@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\SebastiánStarý\\github-classroom\\Vitkovicka-stredni-prumyslova-skola\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\KompreseObrazu.csproj",
+      "projectUniqueName": "C:\\Users\\SebastiánStarý\\Documents\\GitHub\\cv-opr-agregace-kompozice-knihovna-StarkySeb\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\KompreseObrazu.csproj",
       "projectName": "KompreseObrazu",
-      "projectPath": "C:\\Users\\SebastiánStarý\\github-classroom\\Vitkovicka-stredni-prumyslova-skola\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\KompreseObrazu.csproj",
+      "projectPath": "C:\\Users\\SebastiánStarý\\Documents\\GitHub\\cv-opr-agregace-kompozice-knihovna-StarkySeb\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\KompreseObrazu.csproj",
       "packagesPath": "C:\\Users\\SebastiánStarý\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\SebastiánStarý\\github-classroom\\Vitkovicka-stredni-prumyslova-skola\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\obj\\",
+      "outputPath": "C:\\Users\\SebastiánStarý\\Documents\\GitHub\\cv-opr-agregace-kompozice-knihovna-StarkySeb\\cv-komprese-obrazu-v2-StarkySeb\\KompreseObrazu\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\SebastiánStarý\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }
