@@ -1,93 +1,9 @@
-
 using System.IO;
 using System.Security.Cryptography.X509Certificates;
 using System.Xml;
 
 namespace Komprese
 {
-
-    public class PraceSObrazkem: Obrazek{
-            private int [,] pocetBarev = null;
-
-        public PraceSObrazkem(string filePath) : base(filePath)
-        {
-        }
-
-        public void vyhledatPix(string filePath){
-                
-        StreamReader sr = null;
-        String [] line = null;
-        String row;
-        int [,] cisloProPorovnani = null;
-
-        pocetBarev = new int [CountSymbolInLine(filePath), CountLines(filePath)];
-        
-        try
-        {  
-            using (sr = new StreamReader(filePath))
-            {     
-                int j = 0;
-
-                while ((row = sr.ReadLine()) != null)
-                {   
-                    line = row.Split(";", StringSplitOptions.RemoveEmptyEntries);
-                                   
-                    for (int i = 0; i < pocetBarev.GetLength(0); i++)
-                    {
-                        cisloProPorovnani[i,j] = pocetBarev[i,j]; 
-                        
-                        pocetBarev[i,j] = Int32.Parse(line[i]);
-                    }
-                    j++;                    
-                }
-                
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Soubor nelze načíst:");
-            Console.WriteLine(e.Message);
-        }
-
-            }
-        public void spocitatPix(string filePath){
-                              
-        StreamReader sr = null;
-        String [] line = null;
-        String row;
-        int [,] cisloProPorovnani = null;
-
-        pocetBarev = new int [CountSymbolInLine(filePath), CountLines(filePath)];
-        
-        try
-        {  
-            using (sr = new StreamReader(filePath))
-            {     
-                int j = 0;
-
-                while ((row = sr.ReadLine()) != null)
-                {   
-                    line = row.Split(";", StringSplitOptions.RemoveEmptyEntries);
-                                   
-                    for (int i = 0; i < pocetBarev.GetLength(0); i++)
-                    {
-                        cisloProPorovnani[i,j] = pocetBarev[i,j]; 
-                        
-                        pocetBarev[i,j] = Int32.Parse(line[i]);
-                    }
-                    j++;                    
-                }
-                
-            }
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine("Soubor nelze načíst:");
-            Console.WriteLine(e.Message);
-        }      
-            }
-
-    }
   public class Obrazek{
     /// <summary>
     /// Privátní statické dvourozměrné pole, které obsahuje jednotlivé symboly obrázku reprezentující barvu pixelu
@@ -141,7 +57,7 @@ namespace Komprese
     /// vertikální velikosti vypočítáné z počtu řádků.
     /// </summary>
     /// <param name="filePath">Cesta ke vstupnímu obrázku</param>
-    public void readImg(String filePath){
+    private void readImg(String filePath){
 
         StreamReader sr = null;
         String [] line = null;
