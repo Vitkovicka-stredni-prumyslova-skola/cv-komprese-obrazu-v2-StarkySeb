@@ -32,20 +32,42 @@ namespace Komprese
             return i;
         }
     } 
-   public void PaletaBarevObrazku(string filePath){
-    obrazek = new int [CountSymbolInLine(filePath), CountLines(filePath)];
-        using (StreamReader sr = new StreamReader(filePath)){
-            int i = 0;
-            String [] line  = sr.ReadLine().Split(";",StringSplitOptions.RemoveEmptyEntries);
+       public List<int> PaletaBarevObrazku(){
+       
+        List<int> result = new List<int>();
 
-            foreach (string item in line)
-            { 
-                i++; 
+        for (int j = 0; j < obrazek.GetLength(1); j++)
+        {
+            
+            for (int i = 0; i < obrazek.GetLength(0); i++)
+            {                
+                if(!result.Contains(obrazek[i,j])){
+                    result.Add(obrazek[i,j]);
+                }
+                
             }
             
         }
-
+        return result;
     }
+
+        public int PocetUnikatnichBarev(int color)
+        {
+            int count = 0;
+
+            for (int j = 0; j < obrazek.GetLength(1); j++)
+            {
+                for (int i = 0; i < obrazek.GetLength(0); i++)
+                {
+                    if (obrazek[i, j] == color)
+                    {
+                        count++;
+                    }
+                }
+            }
+
+            return count;
+        }
 
     /// <summary>
     /// Metoda spočítá horizontální velikost obrazu na základě počtu symbolů v jednom řádku ve vstupním CSV souboru
