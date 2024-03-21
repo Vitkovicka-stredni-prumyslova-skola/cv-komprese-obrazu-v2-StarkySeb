@@ -16,6 +16,7 @@ namespace Komprese
     /// <param name="filePath">Cesta k obrázku</param>
     public Obrazek(string filePath){
         readImg(filePath);
+        
     }
     /// <summary>
     /// Metoda spočítá vertikální velikost obrazu na základě počtu řádků ve vstupním CSV souboru
@@ -30,6 +31,20 @@ namespace Komprese
             while (sr.ReadLine() != null) { i++; }
             return i;
         }
+    } 
+   public void PaletaBarevObrazku(string filePath){
+    obrazek = new int [CountSymbolInLine(filePath), CountLines(filePath)];
+        using (StreamReader sr = new StreamReader(filePath)){
+            int i = 0;
+            String [] line  = sr.ReadLine().Split(";",StringSplitOptions.RemoveEmptyEntries);
+
+            foreach (string item in line)
+            { 
+                i++; 
+            }
+            
+        }
+
     }
 
     /// <summary>
